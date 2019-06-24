@@ -77,3 +77,5 @@ class Solution:
             return False
         return True
 
+a = Solution()
+print(a.isValid('({})'))
