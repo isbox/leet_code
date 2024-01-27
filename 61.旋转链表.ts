@@ -81,6 +81,7 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
     }
     // 这里是非常重要的逻辑
     // 链表长度 - 真实旋转移动长度 = 环链表需要断开环的地方
+    // 为什么要使用长度 - 余数，因为是从头节点正向递归下去
     let realMove = nodeLen - k % nodeLen;
     if (realMove === nodeLen) {
         // 余数为0，链表无需旋转
